@@ -6,6 +6,7 @@
   <artifactId>micro-java</artifactId>
   <version>1.0</version>
   <properties>
+    <jkube.build.switchToDeployment>true</jkube.build.switchToDeployment>	 
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <maven.compiler.parameters>true</maven.compiler.parameters>
     <maven.compiler.source>11</maven.compiler.source>
@@ -104,7 +105,16 @@
             <maven.home>${maven.home}</maven.home>
           </systemPropertyVariables>
         </configuration>
-      </plugin>
+</plugin>
+<plugin>
+
+	        <groupId>org.eclipse.jkube</groupId>
+
+		        <artifactId>openshift-maven-plugin</artifactId>
+
+			        <version>1.2.0</version>
+
+				      </plugin>
       <!-- Adding the jkube plugin configuration here -->
     </plugins>
   </build>
